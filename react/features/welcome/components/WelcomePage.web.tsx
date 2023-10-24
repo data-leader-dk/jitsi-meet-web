@@ -195,11 +195,6 @@ class WelcomePage extends AbstractWelcomePage<IProps> {
                     <div className = 'header-image' />
                     <div className = 'header-container'>
                         <div className = 'header-watermark-container'>
-                            <div className = 'welcome-watermark'>
-                                <Watermarks
-                                    defaultJitsiLogoURL = { DEFAULT_WELCOME_PAGE_LOGO_URL }
-                                    noMargins = { true } />
-                            </div>
                         </div>
                         <div className = 'welcome-page-settings'>
                             <SettingsButton
@@ -213,10 +208,10 @@ class WelcomePage extends AbstractWelcomePage<IProps> {
                             }
                         </div>
                         <h1 className = 'header-text-title'>
-                            { t('welcomepage.headerTitle') }
+                            Rooms.dk
                         </h1>
                         <span className = 'header-text-subtitle'>
-                            { t('welcomepage.headerSubtitle')}
+                            Videoopkald og onlinekonferencer
                         </span>
                         <div id = 'enter_room'>
                             <div className = 'join-meeting-container'>
@@ -353,32 +348,10 @@ class WelcomePage extends AbstractWelcomePage<IProps> {
 
         return (<footer className = 'welcome-footer'>
             <div className = 'welcome-footer-centered'>
-                <div className = 'welcome-footer-padded'>
-                    <div className = 'welcome-footer-row-block welcome-footer--row-1'>
-                        <div className = 'welcome-footer-row-1-text'>{t('welcomepage.jitsiOnMobile')}</div>
-                        <a
-                            className = 'welcome-badge'
-                            href = { iosDownloadLink }>
-                            <img
-                                alt = { t('welcomepage.mobileDownLoadLinkIos') }
-                                src = './images/app-store-badge.png' />
-                        </a>
-                        <a
-                            className = 'welcome-badge'
-                            href = { androidDownloadLink }>
-                            <img
-                                alt = { t('welcomepage.mobileDownLoadLinkAndroid') }
-                                src = './images/google-play-badge.png' />
-                        </a>
-                        <a
-                            className = 'welcome-badge'
-                            href = { fDroidUrl }>
-                            <img
-                                alt = { t('welcomepage.mobileDownLoadLinkFDroid') }
-                                src = './images/f-droid-badge.png' />
-                        </a>
-                    </div>
-                </div>
+                <div style={{textAlign:'center'}}>
+                    © rooms.dk 2023        
+                </div>    
+                        
             </div>
         </footer>);
     }
